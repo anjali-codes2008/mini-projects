@@ -1,11 +1,93 @@
 #mini projects
 My beginner projects in c and python 
-## c projects (c-projects/)
-- simple calculator.c: a simple calculator 
+## c projects (c-projects/) 
 - calculator.c: calculator with addition , subtraction , multiplication , division and more
-- student_marks.c: student marks program
-- Movie Ticket Booking
-  # Movie Ticket Booking System
+  # Simple Calculator
+
+A C program calculator that performs basic arithmetic operations on multiple numbers with calculation history tracking.
+
+## 🎯 Features
+
+- ➕ **Addition** - Add multiple numbers together
+- ➖ **Subtraction** - Subtract multiple numbers sequentially
+- ✖️ **Multiplication** - Multiply multiple numbers together
+- ➗ **Division** - Divide multiple numbers with zero-check validation
+- 📜 **Calculation History** - View all previous calculations
+- 🔄 **Repeat Operations** - Perform multiple calculations in one session
+
+## 💻 Technologies & Concepts
+
+**Language:** C
+
+**Concepts Used:**
+- Functions (modular code)
+- For loops (for iterating numbers)
+- Do-while loops (menu loop)
+- Switch-case statements
+- If-else conditions
+- Arrays (for history storage)
+- Input/Output (scanf, printf)
+- Float and Integer data types
+
+## 🚀 How to Run
+
+### Compile:
+```bash
+gcc -o calculator calculator.c
+```
+
+### Run:
+```bash
+./calculator
+```
+
+## 📋 Menu Options
+
+1. **Addition** - Enter count of numbers, then input all numbers to add
+2. **Subtraction** - Enter count of numbers, then input all numbers to subtract
+3. **Multiplication** - Enter count of numbers, then input all numbers to multiply
+4. **Division** - Enter count of numbers, then input all numbers to divide (with zero check)
+5. **Calculation History** - Display all previous calculation results
+6. **Exit Calculator** - Close the program
+
+## 🎓 How It Works
+
+### **Addition Function:**
+- Takes count and first number as parameters
+- Loops through remaining numbers
+- Adds each number to the sum
+- Returns total
+
+### **History Tracking:**
+- Each result is stored in `history[]` array
+- `history_count` tracks number of calculations
+- Can view all previous calculations anytime
+
+## 🔒 Safety Features
+
+- **Zero Division Check** - Division function checks if divisor is zero
+- **History Array Limit** - Can store up to 100 calculations
+- **Input Validation** - Handles multiple number inputs
+
+
+## 💡 Future Enhancements
+
+- Add modulus (%) operation
+- Add power (^) operation
+- Save history to a file
+- Clear history option
+- Input validation for invalid choices
+
+## ✨ Author
+
+**Anjali** - RGUKT Ongole Campus  
+First-year Engineering Student
+
+---
+
+**Happy Calculating!** 🧮✨
+
+# Movie Ticket Booking System
 
 A comprehensive C program for booking movie theater tickets with integrated food menu ordering system.
 
@@ -74,7 +156,96 @@ First-year Engineering Student
 
 ## python projects
 - rock, paper, scissors game
+  # Rock Paper Scissors Game
 
-## how to run (c)
-gcc filename.c -o filename
-./filename
+A Python game where you play Rock, Paper, Scissors against the computer using random choice logic.
+
+## 🎯 Features
+
+- 🎮 **Play Against Computer** - Computer makes random choice
+- 🏆 **Win/Lose Detection** - Game determines winner based on rules
+- 📋 **Game Logic** - All possible combinations covered
+- 🎲 **Random Selection** - Computer uses random module for fair play
+- 📊 **Clear Output** - Shows player choice, computer choice, and result
+
+## 💻 Technologies & Concepts
+
+**Language:** Python
+
+**Concepts Used:**
+- Functions (modular code)
+- Dictionaries (storing choices)
+- Random module (computer choice)
+- If-elif-else statements (game logic)
+- String formatting (f-strings)
+- Input/Output (input, print)
+
+## 🚀 How to Run
+
+### Run:
+```bash
+python rock_paper_scissors.py
+```
+
+## 🎮 Game Rules
+
+- **Rock** beats Scissors (Rock smashes Scissors)
+- **Paper** beats Rock (Paper covers Rock)
+- **Scissors** beats Paper (Scissors cuts Paper)
+- **Same Choice** = Tie
+
+
+## 📋 How It Works
+
+### **get_choice() Function:**
+- Takes player input
+- Generates random computer choice
+- Returns dictionary with both choices
+
+### **check_win() Function:**
+- Compares player and computer choices
+- Checks all win/loss/tie conditions
+- Returns result message
+
+
+## 💡 Future Enhancements
+
+- Add loop to play multiple rounds
+- Keep score of wins/losses/ties
+- Add quit option
+- Input validation (check for valid choices)
+- Add Lizard & Spock options (extended version)
+- Save game statistics to a file
+- GUI interface using tkinter
+
+### **Example Enhancement - Multiple Rounds:**
+```python
+while True:
+    choices = get_choice()
+    result = check_win(choices["player"], choices["computer"])
+    print(result)
+    
+    play_again = input("\nPlay again? (yes/no): ")
+    if play_again.lower() != "yes":
+        break
+```
+
+## 🎓 What I Learned
+
+- Using random module for computer AI
+- Dictionary data structure for storing choices
+- If-elif-else logic for game decisions
+- String formatting with f-strings
+- Function design for code reusability
+- Game logic implementation
+
+## ✨ Author
+
+**Anjali** - RGUKT Ongole Campus  
+First-year Engineering Student
+
+---
+
+**Have Fun Playing!** 🎮🎲
+
+
